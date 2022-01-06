@@ -10,7 +10,6 @@ const authMiddleware = (req, res, next) => {
     if (err) {
       return res.status(403).send("token invalid");
     }
-    console.log("decoded", decoded);
     req.decoded = decoded;
     next();
   });

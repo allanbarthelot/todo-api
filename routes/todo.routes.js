@@ -3,6 +3,9 @@ const todoControllers = require("../controllers/todo.controllers");
 
 const router = express.Router();
 
+// group edit endpoints
+router.patch("/status", todoControllers.updateTodosStatus);
+
 router.get("/:list", todoControllers.getTodos);
 router.post("/", todoControllers.addTodo);
 router.delete("/:id", todoControllers.deleteTodo);
